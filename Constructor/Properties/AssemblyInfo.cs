@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Constructor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("XTremeGaida")]
 [assembly: AssemblyProduct("Constructor")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
+[assembly: AssemblyCopyright("Copyright © XTremeGaida 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
