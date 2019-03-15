@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Constructor.Views.ObjectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:Constructor.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+   <UserControl.CommandBindings>
+      <CommandBinding Command="ApplicationCommands.PrintPreview" Executed="RunExecuted" />
+   </UserControl.CommandBindings>
+   <UserControl.InputBindings>
+      <KeyBinding Key="F5" Command="ApplicationCommands.PrintPreview" />
+   </UserControl.InputBindings>
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*" />
+         <ColumnDefinition Width="5" />
+         <ColumnDefinition Width="2*" />
+      </Grid.ColumnDefinitions>
+      <DockPanel Grid.Column="0">
+         <c:ObjectTreeView x:Name="Nodes"></c:ObjectTreeView>
+      </DockPanel>
+      <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="{DynamicResource ShadeBrush}"></GridSplitter>
+      <Grid Grid.Column="2">
+         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="7*"/>
+         </Grid.RowDefinitions>
+         <c:ObjectPropertiesView Grid.Row="0" SelectedItem="{Binding ElementName=Nodes, Path=SelectedNodeValue, Mode=OneWay}" x:Name="NodeProperties"></c:ObjectPropertiesView>
+         <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Background="{DynamicResource ShadeBrush}"></GridSplitter>
+         <c:ConstructorView3D Grid.Row="2" SelectedItem="{Binding ElementName=Nodes, Path=SelectedNodeValue, Mode=OneWay}" x:Name="NodePreview"></c:ConstructorView3D>
+      </Grid>
+   </Grid>
+</UserControl>

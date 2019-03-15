@@ -1,0 +1,33 @@
+﻿<Application x:Class="Constructor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+      <BitmapImage x:Key="IconAdd" UriSource="pack://application:,,,/Constructor;component/Resources/add_medium.png" />
+      <BitmapImage x:Key="IconClear" UriSource="pack://application:,,,/Constructor;component/Resources/clear_medium.png" />
+      <BitmapImage x:Key="IconCopy" UriSource="pack://application:,,,/Constructor;component/Resources/copy_medium.png" />
+      <BitmapImage x:Key="IconDelete" UriSource="pack://application:,,,/Constructor;component/Resources/delete_medium.png" />
+      <BitmapImage x:Key="IconGraph" UriSource="pack://application:,,,/Constructor;component/Resources/graph_medium.png" />
+      <BitmapImage x:Key="IconGraphSmall" UriSource="pack://application:,,,/Constructor;component/Resources/graph_small.png" />
+      <BitmapImage x:Key="IconInputSmall" UriSource="pack://application:,,,/Constructor;component/Resources/input_small.png" />
+      <BitmapImage x:Key="IconNew" UriSource="pack://application:,,,/Constructor;component/Resources/new_medium.png" />
+      <BitmapImage x:Key="IconNodeSmall" UriSource="pack://application:,,,/Constructor;component/Resources/node_small.png" />
+      <BitmapImage x:Key="IconOpen" UriSource="pack://application:,,,/Constructor;component/Resources/open_medium.png" />
+      <BitmapImage x:Key="IconOpenSmall" UriSource="pack://application:,,,/Constructor;component/Resources/open_small.png" />
+      <BitmapImage x:Key="IconOutputSmall" UriSource="pack://application:,,,/Constructor;component/Resources/output_small.png" />
+      <BitmapImage x:Key="IconPaste" UriSource="pack://application:,,,/Constructor;component/Resources/paste_medium.png" />
+      <BitmapImage x:Key="IconRun" UriSource="pack://application:,,,/Constructor;component/Resources/run_medium.png" />
+      <BitmapImage x:Key="IconSave" UriSource="pack://application:,,,/Constructor;component/Resources/save_medium.png" />
+      <BitmapImage x:Key="IconSaveAs" UriSource="pack://application:,,,/Constructor;component/Resources/saveas_medium.png" />
+      <BitmapImage x:Key="IconLock" UriSource="pack://application:,,,/Constructor;component/Resources/lock_medium.png" />
+      <BitmapImage x:Key="IconViewReset" UriSource="pack://application:,,,/Constructor;component/Resources/viewreset_medium.png" />
+      <BitmapImage x:Key="IconViewTop" UriSource="pack://application:,,,/Constructor;component/Resources/viewtop_medium.png" />
+      <BitmapImage x:Key="IconViewLeft" UriSource="pack://application:,,,/Constructor;component/Resources/viewleft_medium.png" />
+      <BitmapImage x:Key="IconViewRight" UriSource="pack://application:,,,/Constructor;component/Resources/viewright_medium.png" />
+      <BitmapImage x:Key="IconViewBottom" UriSource="pack://application:,,,/Constructor;component/Resources/viewbottom_medium.png" />
+      <BitmapImage x:Key="IconViewFront" UriSource="pack://application:,,,/Constructor;component/Resources/viewfront_medium.png" />
+      <BitmapImage x:Key="IconViewBack" UriSource="pack://application:,,,/Constructor;component/Resources/viewback_medium.png" />
+      <BitmapImage x:Key="IconViewOrtho" UriSource="pack://application:,,,/Constructor;component/Resources/viewortho_medium.png" />
+      <BitmapImage x:Key="IconViewPersp" UriSource="pack://application:,,,/Constructor;component/Resources/viewpersp_medium.png" />
+   </Application.Resources>
+</Application>

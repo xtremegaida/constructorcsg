@@ -1,0 +1,10 @@
+.vs
+Constructor/bin
+Constructor/obj
+ConstructorEngineJs/obj
+ConstructorEngineJs/bin
+ConstructorEngine/bin
+ConstructorEngine/obj
+*.user
+*.orig
+*.suo

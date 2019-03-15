@@ -1,0 +1,68 @@
+﻿<Window x:Class="Constructor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:a="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:c="clr-namespace:Constructor.Views"
+        RenderOptions.EdgeMode="Aliased"
+        TextOptions.TextRenderingMode="Aliased"
+        TextOptions.TextFormattingMode="Display"
+        Title="Constructor" Height="600" Width="800" WindowState="Maximized">
+   <Window.Resources>
+      <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Themes/ExpressionDark.xaml" />
+         </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+   </Window.Resources>
+   <Window.CommandBindings>
+      <CommandBinding Command="ApplicationCommands.Open" Executed="LoadClick" />
+      <CommandBinding Command="ApplicationCommands.Save" Executed="SaveClick" />
+      <CommandBinding Command="ApplicationCommands.SaveAs" Executed="SaveAsClick" />
+   </Window.CommandBindings>
+   <Window.InputBindings>
+      <KeyBinding Modifiers="Control" Key="O" Command="ApplicationCommands.Open" />
+      <KeyBinding Modifiers="Control" Key="S" Command="ApplicationCommands.Save" />
+      <KeyBinding Modifiers="Control+Shift" Key="S" Command="ApplicationCommands.SaveAs" />
+   </Window.InputBindings>
+   <DockPanel>
+      <a:DockingManager>
+         <a:DockingManager.Theme>
+            <a:ExpressionDarkTheme />
+         </a:DockingManager.Theme>
+         <a:LayoutRoot>
+            <a:LayoutPanel Orientation="Vertical">
+               <a:LayoutAnchorablePane DockHeight="72">
+                  <a:LayoutAnchorable CanClose="False" CanHide="False" CanAutoHide="False" Title="Operations">
+                     <WrapPanel Orientation="Horizontal" Name="Toolbar">
+                        <Button ToolTip="New" Click="NewClick">
+                           <Image Width="32" Height="32" Source="{StaticResource IconNew}" />
+                        </Button>
+                        <Button ToolTip="Open" Click="LoadClick">
+                           <Image Width="32" Height="32" Source="{StaticResource IconOpen}" />
+                        </Button>
+                        <Button ToolTip="Save" Click="SaveClick" Name="saveButton">
+                           <Image Width="32" Height="32" Source="{StaticResource IconSave}" />
+                        </Button>
+                        <Button ToolTip="Save As" Click="SaveAsClick">
+                           <Image Width="32" Height="32" Source="{StaticResource IconSaveAs}" />
+                        </Button>
+                        <Rectangle Margin="4" Fill="{StaticResource ControlBackgroundBrush}" Width="2"></Rectangle>
+                     </WrapPanel>
+                  </a:LayoutAnchorable>
+               </a:LayoutAnchorablePane>
+               <a:LayoutPanel Orientation="Horizontal">
+                  <a:LayoutDocumentPane x:Name="Documents">
+                  </a:LayoutDocumentPane>
+                  <a:LayoutAnchorablePaneGroup x:Name="toolPane" DockWidth="200" Orientation="Vertical">
+                     <a:LayoutAnchorablePane>
+                        <a:LayoutAnchorable Title="Library" CanHide="False" CanClose="False" AutoHideWidth="250">
+                           <c:LibraryView x:Name="libraryView"></c:LibraryView>
+                        </a:LayoutAnchorable>
+                     </a:LayoutAnchorablePane>
+                  </a:LayoutAnchorablePaneGroup>
+               </a:LayoutPanel>
+            </a:LayoutPanel>
+         </a:LayoutRoot>
+      </a:DockingManager>
+   </DockPanel>
+</Window>
